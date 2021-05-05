@@ -7,6 +7,7 @@ def NumToWords1(num):
     # numbers = {0: 'ສູນ', 1: 'ໜຶ່ງ', 2: 'ສອງ', 3: 'ສາມ', 4: 'ສີ່', 5: 'ຫ້າ', 6: 'ຫົກ', 7: 'ເຈັດ', 8: 'ແປດ', 9: 'ເກົ້າ'}
     numbers = {0: 'SOUN', 1: 'NEUNG', 2: 'SONG', 3: 'SAM', 4: 'SEE', 5: 'HA', 6: 'HOK', 7: 'JED', 8: 'PAED', 9: 'GAO'}
     main, point = [], []
+    result = ''
     # argument
     num = str(num)
     # split
@@ -27,6 +28,8 @@ def NumToWords1(num):
         for a in numbers:
             if num in set(numbers):
                 print(numbers[num])
+                result = numbers[num]
+                return result
                 # print(time.time()-starttime)
                 break
             else:
@@ -56,6 +59,8 @@ def NumToWords1(num):
                     main.append(numbers[m2])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 3:
         main.clear()
@@ -88,6 +93,8 @@ def NumToWords1(num):
                     main.append(numbers[m3])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 4:
         main.clear()
@@ -130,6 +137,8 @@ def NumToWords1(num):
                     main.append(numbers[m4])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 5:
         main.clear()
@@ -182,25 +191,35 @@ def NumToWords1(num):
                     main.append(numbers[m5])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 6:
         main.clear()
         m1, m2, m3, m4, m5, m6 = int(sp[0][0]), int(sp[0][1]), int(sp[0][2]), int(sp[0][3]), int(sp[0][4]), int(sp[0][5])
         for a in numbers:
-            if m1 in set(numbers):
+            if m1 in set(numbers) and m1 != 0:
                 main.append(numbers[m1] + ' SEAN')
                 break
+            else:
+                break
         for a in numbers:
-            if m2 in set(numbers):
+            if m2 in set(numbers) and m2 != 0:
                 main.append(numbers[m2] + ' MEUN')
                 break
-        for a in numbers:
-            if m3 in set(numbers):
-                main.append(numbers[m3] + ' PHUN')
+            else:
                 break
         for a in numbers:
-            if m4 in set(numbers):
+            if m3 in set(numbers) and m3 != 0:
+                main.append(numbers[m3] + ' PHUN')
+                break
+            else:
+                break
+        for a in numbers:
+            if m4 in set(numbers) and m4 != 0:
                 main.append(numbers[m4] + ' HOY')
+                break
+            else:
                 break
         for a in numbers:
             if m5 in set(numbers):
@@ -224,6 +243,8 @@ def NumToWords1(num):
                     main.append(numbers[m6])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 7:
         main.clear()
@@ -233,20 +254,28 @@ def NumToWords1(num):
                 main.append(numbers[m1] + ' LARN')
                 break
         for a in numbers:
-            if m2 in set(numbers):
+            if m2 in set(numbers) and m2 != 0:
                 main.append(numbers[m2] + ' SEAN')
                 break
+            else:
+                break
         for a in numbers:
-            if m3 in set(numbers):
+            if m3 in set(numbers) and m3 != 0:
                 main.append(numbers[m3] + ' MEUN')
                 break
-        for a in numbers:
-            if m4 in set(numbers):
-                main.append(numbers[m4] + ' PHUN')
+            else:
                 break
         for a in numbers:
-            if m5 in set(numbers):
+            if m4 in set(numbers) and m4 != 0:
+                main.append(numbers[m4] + ' PHUN')
+                break
+            else:
+                break
+        for a in numbers:
+            if m5 in set(numbers) and m5 != 0:
                 main.append(numbers[m5] + ' HOY')
+                break
+            else:
                 break
         for a in numbers:
             if m6 in set(numbers):
@@ -270,33 +299,48 @@ def NumToWords1(num):
                     main.append(numbers[m7])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 8:
         main.clear()
         m1, m2, m3, m4, m5, m6, m7, m8 = int(sp[0][0]), int(sp[0][1]), int(sp[0][2]), int(sp[0][3]), int(sp[0][4]), int(sp[0][5]), int(sp[0][6]), int(sp[0][7])
         for a in numbers:
-            if m1 in set(numbers):
+            if m1 in set(numbers) and m1 != 1:
                 main.append(numbers[m1] + ' SIP LARN')
                 break
+            else:
+                main.append('SIP LARN')
+                break
         for a in numbers:
-            if m2 in set(numbers):
+            if m2 in set(numbers) and m2 != 0:
                 main.append(numbers[m2] + ' LARN')
                 break
+            else:
+                break
         for a in numbers:
-            if m3 in set(numbers):
+            if m3 in set(numbers) and m3 != 0:
                 main.append(numbers[m3] + ' SEAN')
                 break
+            else:
+                break
         for a in numbers:
-            if m4 in set(numbers):
+            if m4 in set(numbers) and m4 != 0:
                 main.append(numbers[m4] + ' MEUN')
                 break
-        for a in numbers:
-            if m5 in set(numbers):
-                main.append(numbers[m5] + ' PHUN')
+            else:
                 break
         for a in numbers:
-            if m6 in set(numbers):
+            if m5 in set(numbers) and m5 != 0:
+                main.append(numbers[m5] + ' PHUN')
+                break
+            else:
+                break
+        for a in numbers:
+            if m6 in set(numbers) and m6 != 0:
                 main.append(numbers[m6] + ' HOY')
+                break
+            else:
                 break
         for a in numbers:
             if m7 in set(numbers):
@@ -320,6 +364,8 @@ def NumToWords1(num):
                     main.append(numbers[m8])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 9:
         main.clear()
@@ -329,8 +375,11 @@ def NumToWords1(num):
                 if m1 == 0:
                     break
                 if m1 > 0: 
-                    if m2 == 0:
+                    if m2 == 0 and m3 == 0:
                         main.append(numbers[m1] + ' HOY LARN')
+                        break
+                    elif m2 == 0 and m3 > 0:
+                        main.append(numbers[m1] + ' HOY ' + numbers[m3] + ' LARN')
                         break
                     elif m2 == 1:
                         if m3 == 0:
@@ -400,6 +449,8 @@ def NumToWords1(num):
                     main.append(numbers[m9])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 10:
         main.clear()
@@ -519,6 +570,8 @@ def NumToWords1(num):
                     main.append(numbers[m10])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 11:
         main.clear()
@@ -550,12 +603,18 @@ def NumToWords1(num):
                         main.append(numbers[m1] + ' SIP ED TEU')
                         break
                     else:
-                        main.append(numbers[m1] + ' SIP ' + numbers[m2] + ' TEU')
-                        break
+                        if m3 == 0:
+                            main.append(numbers[m1] + ' SIP TEU')
+                            break
+                        else:
+                            main.append(numbers[m1] + ' SIP ' + numbers[m2] + ' TEU')
+                            break
         for a in numbers:
             if m3 in set(numbers):
                 if m3 == 0:
-                    if m4 == 0:
+                    if m4 == 0 and m5 == 0:
+                        break
+                    elif m4 == 0 and m5 != 0:
                         main.append(numbers[m5] + ' LARN')
                         break
                     elif m4 == 1:
@@ -657,6 +716,8 @@ def NumToWords1(num):
                     main.append(numbers[m11])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     elif cl == 12:
         main.clear()
@@ -719,10 +780,10 @@ def NumToWords1(num):
                             main.append('SIP LARN')
                             break
                         elif m6 == 1:
-                            main.append('HOY SIP ED LARN')
+                            main.append('SIP ED LARN')
                             break
                         else:
-                            main.append('HOY SIP ' + numbers[m6] + ' LARN')
+                            main.append('SIP ' + numbers[m6] + ' LARN')
                             break
                     elif m5 == 2:
                         if m6 == 0:
@@ -820,9 +881,12 @@ def NumToWords1(num):
                     main.append(numbers[m12])
                     break
         print(' '.join(main))
+        result = ' '.join(main)
+        return result
         # print(time.time()-starttime)
     else:
         print('ERROR !!! Out of range, the number is too large!!!')
 
-while True:
-    NumToWords1(input('Input Number Here [max length 15]:'))
+if __name__ == '__main__':
+    while True:
+        NumToWords1(input('Input Number Here [max length 12]:'))
