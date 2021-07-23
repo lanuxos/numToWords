@@ -1,6 +1,8 @@
 # numToWords
 # Convert number to lao word
 
+# NOTED: there is still some bugs and no more update, use this library instead [num-thai](https://github.com/lanuxos/num-thai)
+
 # Usage
 
 ```
